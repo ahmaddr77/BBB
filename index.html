@@ -1,0 +1,71 @@
+<!-- File: /index.html -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+  <meta name="theme-color" content="#3498db" />
+  <title>المعهد التقاني الطبي — المنصّة</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<main id="app" class="app-root">
+  <header class="topbar">
+    <div class="logo">المعهد التقاني الطبي</div>
+  </header>
+
+  <section class="login-card">
+    <h2>دخول الطالب</h2>
+    <div class="login-fields">
+      <label>كود مدفوع
+        <input id="paidCode" type="text" inputmode="numeric" autocomplete="off" />
+      </label>
+      <label>الدخول المجاني (عينة)
+        <input id="freeCode" type="text" autocomplete="off" />
+      </label>
+    </div>
+    <div class="login-actions">
+      <button id="btnPaid">دخول بالكود</button>
+      <button id="btnFree">دخول تجريبي</button>
+    </div>
+  </section>
+
+  <div id="confirmModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-panel">
+      <h3>تأكيد الاختيار</h3>
+      <div id="selectionContainer"></div>
+      <div class="modal-actions">
+        <button id="confirmSelection">تأكيد</button>
+        <button id="cancelSelection">إلغاء</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="subjectsSection" class="subjects-section hidden">
+    <div class="breadcrumbs" id="breadcrumbs"></div>
+    <div id="subjectsGrid" class="subjects-grid"></div>
+    <footer class="paging-controls">
+      <button id="prevBtn" class="nav-btn">◀</button>
+      <button id="nextBtn" class="nav-btn">▶</button>
+    </footer>
+  </section>
+
+  <section id="lessonSection" class="lesson-section hidden">
+    <header class="lesson-header">
+      <h3 id="lessonTitle"></h3>
+      <div class="lesson-actions">
+        <button id="btnContent">المحتوى</button>
+        <button id="btnQuestions">الأسئلة</button>
+        <button id="btnBanks">البنوك</button>
+      </div>
+    </header>
+    <article id="lessonContent" class="lesson-content"></article>
+  </section>
+
+  <div id="toast" class="toast hidden"></div>
+</main>
+
+<script type="module" src="/assets/main.js"></script>
+</body>
+</html>
