@@ -1,0 +1,42 @@
+/* File: /assets/styles.css */
+/* أساسيّة الستايل — تصميم موبايل وثابت، منع السحب الأفقي */
+:root{--bg1:#f5f7fa;--bg2:#c3cfe2;--accent:#3498db;--muted:#7f8c8d}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body,#app{height:100%}
+body{font-family:'El Messiri',sans-serif;background:linear-gradient(135deg,var(--bg1) 0%,var(--bg2) 100%);color:#2c3e50;overflow:hidden}
+.app-root{display:flex;flex-direction:column;min-height:100vh;padding:12px}
+.topbar{display:flex;align-items:center;justify-content:center;padding:8px 0}
+.logo{font-size:18px;font-weight:700;background:linear-gradient(45deg,#3498db,#9b59b6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.login-card{margin:12px auto;width:100%;max-width:420px;background:linear-gradient(145deg,#fff,#f3f6fb);border-radius:14px;padding:14px;box-shadow:8px 8px 20px rgba(0,0,0,0.06)}
+.login-card h2{margin-bottom:10px;text-align:center}
+.login-fields label{display:block;margin:8px 0;font-size:14px}
+.login-fields input{width:100%;padding:10px;border-radius:8px;border:1px solid #e0e6ef;margin-top:6px}
+.login-actions{display:flex;gap:8px;justify-content:center;margin-top:12px}
+.login-actions button{padding:10px 14px;border-radius:10px;border:none;background:linear-gradient(45deg,var(--accent),#9b59b6);color:#fff;font-weight:700}
+.hidden{display:none}
+.subjects-section{flex:1;overflow:auto;padding:8px}
+.subjects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.subject-card{background:#fff;border-radius:12px;padding:14px;box-shadow:8px 8px 20px rgba(0,0,0,0.06);text-align:center;position:relative}
+.subject-card.locked{opacity:0.45}
+.subject-number{position:absolute;left:10px;top:10px;background:linear-gradient(45deg,var(--accent),#9b59b6);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.lesson-section{padding:10px;overflow:auto}
+.lesson-header{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.lesson-actions button{margin-left:6px;padding:8px;border-radius:8px;border:none}
+.lesson-content{margin-top:12px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;background:#222;color:#fff;padding:8px 12px;border-radius:8px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:2000}
+.modal-panel{background:#fff;padding:16px;border-radius:12px;width:92%;max-width:520px}
+.paging-controls{display:flex;justify-content:space-between;padding:8px}
+.nav-btn{padding:10px;border-radius:8px;border:none}
+.small-btn{display:inline-block;padding:6px 8px;margin:6px;border-radius:8px;border:none;background:#eef1f6}
+.secItem{margin-bottom:10px}
+.yearItem{margin-left:10px;margin-top:6px}
+.answer-btn{display:block;padding:10px;border-radius:8px;margin:8px 0;border:none}
+.answer-correct{background:#2ecc71;color:#fff}
+.answer-wrong{background:#e74c3c;color:#fff}
+/* منع السحب الأفقي */
+body,html{touch-action:pan-y;overflow-x:hidden}
+/* منع الطباعة */
+@media print{*{display:none !important}}
+/* صغيرة لجوال */
+@media (max-width:420px){.subjects-grid{grid-template-columns:repeat(2,1fr)}.login-card{padding:12px}}
